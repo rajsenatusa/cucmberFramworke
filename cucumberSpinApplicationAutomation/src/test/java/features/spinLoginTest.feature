@@ -4,7 +4,7 @@ Feature: Spin Application Login
 Scenario: As Spin User admin I should be able to login to application.
 
 Given Launch the spin Application
-When login with credentials "srajendran" and "Password@1143"
+When login with credentials "SRajendran" and "Password@1143"
 Then Verify that user user logged in to the application successfully
 And  Verify spin application home page is displayed
 

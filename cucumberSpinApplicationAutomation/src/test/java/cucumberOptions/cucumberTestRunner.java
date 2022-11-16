@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions (
 		features = "src\\test\\java\\features",
 		glue = "spinstepdefinitions", 
-		tags= "@SanityTest", 
+		tags= "@TriggerDailyManual", 
 		
 //		dryRun = true, // step definition implementation check
 		monochrome = true, // test results in console formatted
@@ -21,8 +21,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		)
 
-public class testRunner {
+public class cucumberTestRunner {
 	
 
-	
 }
