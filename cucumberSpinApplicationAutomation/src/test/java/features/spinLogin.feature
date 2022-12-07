@@ -4,7 +4,7 @@ Feature: Spin Application Login
 Scenario: As Spin User admin I should be able to login to application.
 
 Given Launch the spin Application
-When login with credentials "SRajendran" and "Password@1143"
+When login with credentials "SRajendran" and "Password@2023!"
 Then Verify that user user logged in to the application successfully
 And  Verify spin application home page is displayed
 
@@ -19,10 +19,10 @@ And  Verify spin application home page is displayed
 
 Examples:
 |username	|password|
-|ag1730  	|password|
-|ag1529  	|password|
-|ag8134  	|password|
-|jlowe   	|password|
+|ag1730  	|Password@2023!|
+|ag1529  	|Password@2023!|
+|ag8134  	|Password@2023!|
+|jlowe   	|Password@2023!|
 
 
 

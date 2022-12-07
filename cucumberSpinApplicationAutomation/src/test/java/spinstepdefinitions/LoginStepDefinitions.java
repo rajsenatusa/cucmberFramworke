@@ -13,9 +13,7 @@ import pageObjects.LoginPage;
 import pageObjects.ObjectManager;
 import spinUtils.TestContextSetup;
 
-
 @RunWith(Cucumber.class)
-
 public class LoginStepDefinitions {
 	
 	//container creating dependency injection.

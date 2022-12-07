@@ -11,12 +11,12 @@ public class DailyJobsManualPage {
 		this.driver =driver;		
 	}
 	
-	By OperationsMenu = By.linkText("Operations");
-	By BatchJobs = By.xpath("//th[@id='Menu_Operations_BatchJobs']");	
+	By OperationsMenu = By.xpath("//li[@id='Menu_Operations']");
+	By BatchJobs = By.xpath("//a[@id='Menu_Operations_BatchJobs']");	
 	By DailyJobsManual = By.xpath("//a[@id='Daily Manual']");
 	By JobSummary = By.xpath("//span[contains(text(),'Job Summary')]");
 	By JobSummaryName = By.xpath("//span[@id='Name_text']");
-	By StartJob = By.xpath("//a[@id='StartJobAction']");
+	By StartJob = By.xpath("//span[contains(text(),'Start Job')]");
 	
 		
 	//action methods for spin home page

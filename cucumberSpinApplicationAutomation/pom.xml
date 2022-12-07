@@ -34,22 +34,23 @@
 			    <version>7.8.1</version>
 			</dependency>
 			    
+		    <!-- TestNG Test Runner-->	    
 		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng 
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-testng</artifactId>
 			    <version>7.9.0</version>
-			</dependency> -->
-					    
-		    
-		    
-		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+			</dependency>
+			-->   
+		    		 
+		    <!-- Junit Test Runner-->
+		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit 			-->
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-junit</artifactId>
 			    <version>7.8.1</version>
 			    <scope>test</scope>
-			</dependency>  
+			</dependency>   
 
 			
 			  <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -74,11 +75,76 @@
 			    <scope>test</scope>
 			</dependency>
 			
+			
+			<!--- Adaptor needed for cucumber Reports -->
+			<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+			<dependency>
+			    <groupId>com.aventstack</groupId>
+			    <artifactId>extentreports</artifactId>
+			    <version>5.0.9</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+			<dependency>
+			    <groupId>tech.grasshopper</groupId>
+			    <artifactId>extentreports-cucumber7-adapter</artifactId>
+			    <version>1.9.2</version>
+			</dependency>
+			
+			<!-- convert File to Byte format screenshot capture-->		
+			
+			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+			<dependency>
+			    <groupId>commons-io</groupId>
+			    <artifactId>commons-io</artifactId>
+			    <version>2.11.0</version>
+			</dependency>
+			
+					
+			
+			
   </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+      
+      
+		  <plugin>
+		  <groupId>com.github.temyers</groupId>
+		  <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+		  <version>5.0.0</version>
+		  <executions>
+		    <execution>
+		      <id>generateRunners</id>
+		      <phase>generate-test-sources</phase>
+		      <goals>
+		        <goal>generateRunners</goal>
+		      </goals>
+		      <configuration>
+		        <!-- Mandatory -->
+		        <!-- List of package names to scan for glue code. -->
+		        <glue>
+		          <package>spinstepdefinitions</package>
+		        </glue>
+		       <featuresDirectory>features</featuresDirectory>
+		       <cucumberOutputDir>target/cucumber-paralell</cucumberOutputDir>
+		       <tags>@SmokeTest</tags>
+		      </configuration>
+		    </execution>
+		  </executions>
+		</plugin>
+		
+		<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <parallel>methods</parallel>
+          <threadCount>2</threadCount>
+        </configuration>
+      </plugin>
+            
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
