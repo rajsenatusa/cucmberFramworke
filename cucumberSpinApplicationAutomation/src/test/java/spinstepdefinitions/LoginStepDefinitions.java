@@ -2,18 +2,17 @@ package spinstepdefinitions;
 
 import java.io.IOException;
 
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.junit.Cucumber;
 import pageObjects.LoginPage;
 import pageObjects.ObjectManager;
 import spinUtils.TestContextSetup;
 
-@RunWith(Cucumber.class)
+
+
 public class LoginStepDefinitions {
 	
 	//container creating dependency injection.
@@ -47,22 +46,22 @@ public class LoginStepDefinitions {
 
     }
     
-    @When("^User Login with (.+) and (.+)$")
+	@When("^User Login with (.+) and (.+)$")
     public void user_login_with_and (String username, String password){
     	
     	System.out.println("Login Step Started!!");       	    	
  	   	loginPage.enterUserName(username);
     	loginPage.enterPassword(password);
-    	loginPage.clickSignIn();    			
-		System.out.println("Login Step Ended!!"); 
+    	loginPage.clickSignIn();          	  	
+    	System.out.println("Login Step Ended!!");     
 		
     }
 
     @Then("^Verify that user user logged in to the application successfully$")
     public void verify_that_user_user_logged_in_to_the_application_successfully(){
     	
-    	System.out.println("Login Validation Started !!");      	
-    	testContextSetup.GenericUtils.validateLoginTitile();    	
+    	System.out.println("Login Validation Started !!");
+    	testContextSetup.GenericUtils.validateLogonText(); 	
     	System.out.println("Login Validation Ended !!");
     	  
     }

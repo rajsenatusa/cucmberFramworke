@@ -1,15 +1,13 @@
 package cucumberOptions;
 
-import org.junit.runner.RunWith;
+import org.testng.annotations.DataProvider;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-@RunWith(Cucumber.class)
-@CucumberOptions (
-		features = "src\\test\\java\\features",
+
+@io.cucumber.testng.CucumberOptions (
+		features = "@target/failed_scenarios.txt",		
 		glue = "spinstepdefinitions", 
-		tags= "@SmokeTest", 
 		
 //		dryRun = true, // step definition implementation check
 		monochrome = true, // test results in console formatted
@@ -22,7 +20,16 @@ import io.cucumber.junit.CucumberOptions;
 		
 		)
 
-public class cucumberJunitRunner   {
+public class FailedTestNGTestRunner extends AbstractTestNGCucumberTests   {
+	
+	@Override
+	@DataProvider(parallel = true)
+	public Object[][] scenarios()
+	{
+		return super.scenarios();
+	}
+	
+	
 	
 
 }

@@ -22,14 +22,17 @@ public class TestBase {
 				Properties prop = new Properties ();
 				prop.load(filename);
 				
-				String modelURL = prop.getProperty("model");
+				String appUrL = prop.getProperty("model");
+				String browser_properties = prop.getProperty("browser");
+				String browser_mvn = System.getProperty("browser");
+				String browser = browser_mvn!=null ? browser_mvn:browser_properties;
 			
 					if (driver == null) 
 					{
-						if (prop.getProperty("browser").equalsIgnoreCase("chrome")) 
+						if (browser.equalsIgnoreCase("chrome")) 
 						{
 							driver = WebDriverManager.chromedriver().create();
-							driver.get(modelURL);
+							driver.get(appUrL);
 						}
 					    			
 					}

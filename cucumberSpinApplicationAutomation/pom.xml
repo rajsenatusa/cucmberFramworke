@@ -10,7 +10,7 @@
 
   <name>cucumberSpinApplicationAutomation</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://model-ai.iscs.com/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,37 +20,40 @@
 
   <dependencies>
   	
+		    <!--
 		    <dependency>
 		      <groupId>junit</groupId>
 		      <artifactId>junit</artifactId>
 		      <version>4.11</version>
 		      <scope>test</scope>
 		    </dependency>
+		    -->
 		    
     		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-java</artifactId>
-			    <version>7.8.1</version>
+			    <version>6.9.1</version>
 			</dependency>
 			    
 		    <!-- TestNG Test Runner-->	    
-		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng 
+		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-testng</artifactId>
-			    <version>7.9.0</version>
+			    <version>6.9.1</version>
 			</dependency>
-			-->   
-		    		 
+		
+			  		    		 
 		    <!-- Junit Test Runner-->
-		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit 			-->
+		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit 			
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-junit</artifactId>
 			    <version>7.8.1</version>
 			    <scope>test</scope>
 			</dependency>   
+			-->
 
 			
 			  <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -100,6 +103,7 @@
 			    <version>2.11.0</version>
 			</dependency>
 			
+		
 					
 			
 			
@@ -135,7 +139,7 @@
 		  </executions>
 		</plugin>
 		
-		<plugin>
+		<!--<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M7</version>
@@ -144,6 +148,7 @@
           <threadCount>2</threadCount>
         </configuration>
       </plugin>
+      -->
             
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>

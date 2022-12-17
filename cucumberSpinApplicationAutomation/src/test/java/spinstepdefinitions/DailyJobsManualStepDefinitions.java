@@ -1,17 +1,13 @@
 package spinstepdefinitions;
 
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.junit.Cucumber;
 import pageObjects.DailyJobsManualPage;
 import pageObjects.LoginPage;
 import pageObjects.ObjectManager;
 import spinUtils.TestContextSetup;
 
-
-@RunWith(Cucumber.class)
 
 public class DailyJobsManualStepDefinitions {
 	

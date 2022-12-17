@@ -14,6 +14,7 @@ public class LoginPage {
 	 By UserName = By.xpath("//input[@id='j_username']");
 	 By Password = By.xpath("//input[@id='j_password']");
 	 By SignIn = By.xpath("//a[@id='SignIn']");
+	 By LogOn = By.xpath("//td[contains(text(),'Logon:')]");
 	 By ChangePassword = By.xpath("//a[contains(text(),'Change Password')]");
 	 By ForgotPassword = By.xpath("//a[contains(text(),'Forgot Password')]");
 	
@@ -49,5 +50,7 @@ public class LoginPage {
 		
 		return driver.getTitle();
 	}
+	
+
 
 }
