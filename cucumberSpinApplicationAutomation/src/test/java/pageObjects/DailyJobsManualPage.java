@@ -17,6 +17,11 @@ public class DailyJobsManualPage {
 	By JobSummary = By.xpath("//span[contains(text(),'Job Summary')]");
 	By JobSummaryName = By.xpath("//span[@id='Name_text']");
 	By StartJob = By.xpath("//span[contains(text(),'Start Job')]");
+	By History = By.xpath("//a[@id='Tab_JobHistoryList']");
+	By JobStatus = By.xpath("//td[contains(text(),'Running')]");
+	
+	//*[@id="Menu_Operations"]
+	//*[@id="Menu_Operations_BatchJobs"]
 	
 		
 	//action methods for spin home page
@@ -38,6 +43,11 @@ public class DailyJobsManualPage {
 	public void StartJobClick () {
 		
 		driver.findElement(StartJob).click();
+	}
+	
+	public void history () {
+		driver.findElement(History).click();
+		
 	}
 
 }

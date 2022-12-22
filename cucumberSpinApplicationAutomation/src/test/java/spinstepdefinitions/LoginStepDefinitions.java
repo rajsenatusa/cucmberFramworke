@@ -56,15 +56,14 @@ public class LoginStepDefinitions {
     	System.out.println("Login Step Ended!!");     
 		
     }
-
-    @Then("^Verify that user user logged in to the application successfully$")
-    public void verify_that_user_user_logged_in_to_the_application_successfully(){
-    	
+	
+    @Then("^Verify that user (.+) logged in to the application successfully$")
+    public void verify_that_user_logged_in_to_the_application_successfully(String username) {
     	System.out.println("Login Validation Started !!");
-    	testContextSetup.GenericUtils.validateLogonText(); 	
+    	loginPage.validateLogonText(username);
     	System.out.println("Login Validation Ended !!");
-    	  
     }
+    
 
     @And("^Verify spin application home page is displayed$")
     public void verify_spin_application_home_page_is_displayed() {

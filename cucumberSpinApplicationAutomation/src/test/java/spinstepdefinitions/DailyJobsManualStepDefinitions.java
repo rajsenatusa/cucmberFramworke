@@ -31,16 +31,18 @@ public class DailyJobsManualStepDefinitions {
     	dailyJobsManualPage.OperationMenuClick();
     	dailyJobsManualPage.BatchJobsClick();  
     	dailyJobsManualPage.DailyJobsManualClick();
+
     }
     
     @And("^Start the job$")
-    public void start_the_job()  {
+    public void start_the_job()  {    	
     	
     	dailyJobsManualPage.StartJobClick();     
     }
     
     @Then("^Verify that job successfully running$")
-    public void verify_that_job_successfully_running() {
+    public void verify_that_job_successfully_running() {    	
+    	
     	System.out.println("Daily Manual Job Successfully Triggered");
     }
    
