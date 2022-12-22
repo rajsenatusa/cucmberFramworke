@@ -6,7 +6,7 @@ public class ObjectManager {
 	
 	public  LoginPage LoginPage;
 	public  HomePage HomePage;
-	public  DailyJobsManualPage DailyJobManualPage;
+	public  BatchJobsPage BatchJobsPage;
 	public  WebDriver driver;
 	
 	public ObjectManager (WebDriver driver) {
@@ -24,8 +24,8 @@ public class ObjectManager {
 		return HomePage;
 	}
 	
-	public DailyJobsManualPage getdailyjobManualPage() {		
-		DailyJobManualPage = new DailyJobsManualPage(driver);
-		return DailyJobManualPage;
+	public BatchJobsPage getdailyjobManualPage() {		
+		BatchJobsPage = new BatchJobsPage(driver);
+		return BatchJobsPage;
 	}
 }

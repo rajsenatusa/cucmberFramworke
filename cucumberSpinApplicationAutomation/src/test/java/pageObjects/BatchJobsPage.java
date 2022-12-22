@@ -3,11 +3,11 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DailyJobsManualPage {
+public class BatchJobsPage {
 	
 	public WebDriver driver;
 	
-	public DailyJobsManualPage (WebDriver driver) {		
+	public BatchJobsPage (WebDriver driver) {		
 		this.driver =driver;		
 	}
 	
@@ -19,6 +19,7 @@ public class DailyJobsManualPage {
 	By StartJob = By.xpath("//span[contains(text(),'Start Job')]");
 	By History = By.xpath("//a[@id='Tab_JobHistoryList']");
 	By JobStatus = By.xpath("//td[contains(text(),'Running')]");
+	By SpeicalDailyJobs = By.xpath("//a[@id='Special']");
 	
 	//*[@id="Menu_Operations"]
 	//*[@id="Menu_Operations_BatchJobs"]
@@ -43,6 +44,10 @@ public class DailyJobsManualPage {
 	public void StartJobClick () {
 		
 		driver.findElement(StartJob).click();
+	}
+	
+	public void SpecialDailyJobs () {
+		driver.findElement(SpeicalDailyJobs).click();
 	}
 	
 	public void history () {
