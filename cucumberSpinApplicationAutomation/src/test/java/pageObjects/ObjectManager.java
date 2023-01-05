@@ -7,6 +7,7 @@ public class ObjectManager {
 	public  LoginPage LoginPage;
 	public  HomePage HomePage;
 	public  BatchJobsPage BatchJobsPage;
+	public  UserManagementPage UserManagementPage;
 	public  WebDriver driver;
 	
 	public ObjectManager (WebDriver driver) {
@@ -28,4 +29,11 @@ public class ObjectManager {
 		BatchJobsPage = new BatchJobsPage(driver);
 		return BatchJobsPage;
 	}
+	
+	public UserManagementPage getUserManagementPage() {		
+		UserManagementPage = new UserManagementPage(driver);
+		return UserManagementPage;
+	}
 }
+
+

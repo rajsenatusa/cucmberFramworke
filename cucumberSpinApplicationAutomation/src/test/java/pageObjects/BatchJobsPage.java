@@ -46,7 +46,8 @@ public class BatchJobsPage {
 		driver.findElement(StartJob).click();
 	}
 	
-	public void SpecialDailyJobs () {
+	public void SpecialDailyJobsClick () {
+				
 		driver.findElement(SpeicalDailyJobs).click();
 	}
 	
@@ -54,5 +55,5 @@ public class BatchJobsPage {
 		driver.findElement(History).click();
 		
 	}
-
+	
 }

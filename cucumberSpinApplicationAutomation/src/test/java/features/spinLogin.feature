@@ -1,4 +1,4 @@
-Feature: Spin Application Login
+Feature: Spin Application Login Feature
 
   @Login
   Scenario Outline: As Spin Registered User I should be able to login to the application.
