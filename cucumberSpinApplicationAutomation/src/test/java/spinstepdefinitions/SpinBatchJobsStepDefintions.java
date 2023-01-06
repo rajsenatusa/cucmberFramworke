@@ -1,12 +1,15 @@
 package spinstepdefinitions;
 
+import java.io.IOException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pageObjects.LoginPage;
 import pageObjects.ObjectManager;
 import pageObjects.BatchJobsPage;
@@ -28,13 +31,31 @@ public class SpinBatchJobsStepDefintions {
 		this.batchJobsPage = testContextSetup.ObjectManager.getdailyjobManualPage();
 
 	}
+	
+	   @Given("^Launch the spin Application$")
+	    public void launch_the_spin_application() throws IOException{
+	    	       	
+	    	testContextSetup.TestBase.DriverManager();
+	    	
+	    }
+	   
+		@When("^User Login with (.+) and (.+)$")
+	    public void user_login_with_and (String username, String password){
+	    	
+	    	System.out.println("Login Step Started!!");       	    	
+	 	   	loginPage.enterUserName(username);
+	    	loginPage.enterPassword(password);
+	    	loginPage.clickSignIn();          	  	
+	    	System.out.println("Login Step Ended!!");     
+			
+	    }
 		       
     @And("^Navigate to the  daily manual jobs screen$")
     public void navigate_to_the_daily_manual_jobs_screen() throws Throwable {
     	
     	batchJobsPage.OperationMenuClick();
     	batchJobsPage.BatchJobsClick();  
-    	batchJobsPage.DailyJobsManualClick();
+
 
     }
     
@@ -43,7 +64,7 @@ public class SpinBatchJobsStepDefintions {
     	
     	batchJobsPage.OperationMenuClick();
     	batchJobsPage.BatchJobsClick();  
-    	batchJobsPage.SpecialDailyJobsClick(); 
+  
     			
     }
     
@@ -57,10 +78,12 @@ public class SpinBatchJobsStepDefintions {
 		switch (dayOfWeek) {		
 		  case FRIDAY:
 			    System.out.println("TODAY IS FRIDAY");
+			  	batchJobsPage.SpecialDailyJobsClick(); 
 		    	batchJobsPage.StartJobClick();  
 			    break;
 		  case SATURDAY:
 			    System.out.println("TODAY IS SATURDAY");
+			  	batchJobsPage.SpecialDailyJobsClick(); 
 		    	batchJobsPage.StartJobClick();  
 			    break;
 			default:
@@ -80,22 +103,27 @@ public class SpinBatchJobsStepDefintions {
 		switch (dayOfWeek) {		
 		  case MONDAY:
 			    System.out.println("TODAY IS MONDAY");
+		    	batchJobsPage.DailyJobsManualClick();
 		    	batchJobsPage.StartJobClick();  
 			    break;
 		  case TUESDAY:
 			    System.out.println("TODAY IS TUESDAY");
+		    	batchJobsPage.DailyJobsManualClick();
 		    	batchJobsPage.StartJobClick();  
 			    break;
 		  case WEDNESDAY:
 			    System.out.println("TODAY IS WEDNESDAY");
+		    	batchJobsPage.DailyJobsManualClick();
 		    	batchJobsPage.StartJobClick();  
 			    break;
 		  case THURSDAY:
 			    System.out.println("TODAY IS THURSDAY");
+		    	batchJobsPage.DailyJobsManualClick();
 		    	batchJobsPage.StartJobClick();  
 			    break;
 		  case SUNDAY:
 			    System.out.println("TODAY IS SUNDAY");
+		    	batchJobsPage.DailyJobsManualClick();
 		    	batchJobsPage.StartJobClick();  
 			    break;
 			default:

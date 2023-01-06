@@ -1,6 +1,8 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -59,44 +61,14 @@ public class LoginPage {
 	// login page validations
 	public void validateLogonText(String username) {	
 		
-		WebElement LoggedInUser = driver.findElement(LogonText);
-		String ExpectedUserText = LoggedInUser.getAttribute("innerHTML");
-		String LoggedinUserText = ExpectedUserText.trim();		
-		System.out.println("Logged in User Text:" +LoggedinUserText);		
-		Assert.assertTrue(LoggedinUserText.equalsIgnoreCase(username));
-										
+	
+			WebElement LoggedInUser = driver.findElement(LogonText);
+			String ExpectedUserText = LoggedInUser.getAttribute("innerHTML");
+			String LoggedinUserText = ExpectedUserText.trim();		
+			System.out.println("Logged in User Text:" +LoggedinUserText);		
+			Assert.assertTrue(LoggedinUserText.equalsIgnoreCase(username));
+			
+			
 	}
-		
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-
+	
 }
