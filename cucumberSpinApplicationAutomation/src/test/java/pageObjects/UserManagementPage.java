@@ -3,7 +3,6 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public class UserManagementPage {
 	
@@ -57,7 +56,7 @@ public class UserManagementPage {
 	}
 	
 	public void EnterConfirmPassword (String newpassword) {
-		driver.findElement(NewPasswordTextBox).sendKeys(newpassword);
+		driver.findElement(ConfirmPasswordTextBox).sendKeys(newpassword);
 	}
 	
 	public void UserMustChangePasswordOnNextLoginCheckBox () {

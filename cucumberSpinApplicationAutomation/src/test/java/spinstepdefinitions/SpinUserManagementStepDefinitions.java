@@ -38,8 +38,10 @@ public class SpinUserManagementStepDefinitions {
 	    }
 
 	    @And("^Search the user (.+)$")
-	    public void search_the_user(String username) throws Throwable {
-	    	userManagementPage.SearchByTextBox(username);
+	    public void search_the_user(String searchuser) throws Throwable {
+	    	
+	    	userManagementPage.SearchByTextBox(searchuser);
+	    	userManagementPage.SearchBySearchButtonClick();
 
 	    }
 
@@ -62,10 +64,11 @@ public class SpinUserManagementStepDefinitions {
 	    @Then("^Verify password Changed Successfully$")
 	    public void verify_password_changed_successfully() throws Throwable {
 	    	
-	    	
-	    	
-
+	    	userManagementPage.validationPasswordChangeText();	    	
+	    	System.out.println("USER PASSWORD CHANGED SUCCESSFULLY");
 	    }
-
+	    	
+	    	
+	    		  
     
 }

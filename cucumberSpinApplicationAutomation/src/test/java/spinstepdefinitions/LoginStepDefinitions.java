@@ -46,7 +46,7 @@ public class LoginStepDefinitions {
 
     }
     
-	@When("^User Login with (.+) and (.+)$")
+    @When("^User Login with (.+) and (.+)$")
     public void user_login_with_and (String username, String password){
     	
     	System.out.println("Login Step Started!!");       	    	
