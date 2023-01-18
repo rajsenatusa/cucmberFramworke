@@ -48,6 +48,7 @@ public class UserMaintenancePage {
 	By PasswordPolicy = By.xpath("//select[@id='PasswordInfo.PasswordRequirementTemplateId']");
 	By BranchCode = By.xpath("//select[@id='UserInfo.BranchCd']");	
 	By SaveBtn = By.xpath("//a[@id='Save']");
+	
 	By UserMustChagePasswordOnNextLogin = By.xpath("//input[@id='UserInfo.PasswordMustChangeInd']");
 	By addRole = By.xpath("//a[@id='AddRole']");
 	By SelectRole = By.xpath("//select[@id='UserRole.AuthorityRoleIdRef']");
@@ -57,8 +58,9 @@ public class UserMaintenancePage {
 	By UserInfoText = By.xpath("//span[@id='UserInfo.LoginId_text']");
 	By UserAuthRole = By.xpath("//select[@id='UserRole.AuthorityRoleIdRef']");
 	
+	By UserRoleDescription = By.xpath("//td[contains(text(),'Administrator Role for Everything')]");	
 	By InformationMsg = By.xpath("//div[@id='FieldConstraintError']");
-	
+
 	
 	
 				
@@ -247,21 +249,24 @@ public class UserMaintenancePage {
 			WebElement createdUser = driver.findElement(UserInfoText);
 			String ExpectedUserText = createdUser.getAttribute("innerHTML");
 			String createdUserText = ExpectedUserText.trim();		
-			System.out.println("Logged in User Text:" +createdUserText);		
+			System.out.println("User Created Successfully:" +createdUserText);		
 			Assert.assertTrue(ExpectedUserText.equalsIgnoreCase(createdUserText));
 			
 					
 		}
 
 		public void addRoleforUser(String userrole) {
-			driver.findElement(addRole).click();
-			WebDriverWait wait = new WebDriverWait(driver, 90);
+			
+			WebDriverWait wait = new WebDriverWait(driver, 90);			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(addRole));	
+			driver.findElement(addRole).click();			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(UserAuthRole));	
 			Select SelectAuthorityRole = new Select (driver.findElement(UserAuthRole));
 			SelectAuthorityRole.selectByValue(userrole);
-			driver.findElement(SaveBtn).click();	
-			wait.until(ExpectedConditions.visibilityOfElementLocated(UserInfoText));
-			System.out.println("User" +UserInfoText+ "Succesfully Created" +userrole+ "Access Given Successfully" );
+			wait.until(ExpectedConditions.visibilityOfElementLocated(UserRoleDescription));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(SaveBtn));
+			driver.findElement(SaveBtn).click();
+			System.out.println(userrole+ " Access Given Successfully" );
 			
 		}
 

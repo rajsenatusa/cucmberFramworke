@@ -170,6 +170,7 @@ public class SpinUserMaintenanceStepDefinitions {
         public void add_user_role_as(String userrole) throws Throwable {
         	
         	userMaintenancePage.addRoleforUser(userrole);
+        	
         }
 
 }

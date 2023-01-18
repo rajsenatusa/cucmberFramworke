@@ -63,23 +63,6 @@ Feature: Spin Application User Management Feature
     Then Verify User Successfully Created
     Then Add User Role as <UserRole>
 
-
     Examples: 
-      | username    | password     | SearchUser | UserCode  | UserType | ConcurrentSessions | Status | Language | FirstName      | LastName   | Address                    | City  | State | Zip        | Country       | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress 						|Department | SupervisorCode | ToolbarSearchMode | Password    | ConfirmPassword | PasswordPolicy | BranchCode  | UserRole 		|																
-      | gallopadmin | Winter@2022! | srajendran | TestUsr06 | Company  |                 99 | Active | en_US    | TestUser06		 | TestUser06 | 5426 Bay Center Dr STE 600 | Tampa | FL    | 33609-3440 | United States | Business           | (813) 880-7000     | aiicmodel@aiiflorida.com	|IT         | Dochoa         | None              | Winter@2023 | Winter@2023		 | StandardUser   | Home Office | Everything	|
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      | username    | password     | SearchUser | UserCode  	 | UserType | ConcurrentSessions | Status | Language | FirstName | LastName  | Address                    | City  | State | Zip        | Country       | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             | Department | SupervisorCode | ToolbarSearchMode | Password    | ConfirmPassword | PasswordPolicy | BranchCode  | UserRole   |
+      | gallopadmin | Winter@2022! | srajendran | TestUsrRole	 | Company  |                 99 | Active | en_US    | Jeeva 		 | Naveen    | 5426 Bay Center Dr STE 600 | Tampa | FL    | 33609-3440 | United States | Business           | (813) 880-7000     | aiicmodel@aiiflorida.com | IT         | Dochoa         | None              | Winter@2023 | Winter@2023     | StandardUser   | Home Office | Everything |
