@@ -33,6 +33,7 @@ public class TestBase {
 						{
 							driver = WebDriverManager.chromedriver().create();
 							driver.get(appUrL);
+							driver.manage().window().maximize();
 						}
 					    			
 					}

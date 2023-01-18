@@ -8,6 +8,7 @@ public class ObjectManager {
 	public  HomePage HomePage;
 	public  BatchJobsPage BatchJobsPage;
 	public  UserManagementPage UserManagementPage;
+	public  UserMaintenancePage UserMaintenancePage;
 	public  WebDriver driver;
 	
 	public ObjectManager (WebDriver driver) {
@@ -33,6 +34,11 @@ public class ObjectManager {
 	public UserManagementPage getUserManagementPage() {		
 		UserManagementPage = new UserManagementPage(driver);
 		return UserManagementPage;
+	}
+	
+	public UserMaintenancePage getUserMainteanacePage() {		
+		UserMaintenancePage = new UserMaintenancePage(driver);
+		return UserMaintenancePage;
 	}
 }
 

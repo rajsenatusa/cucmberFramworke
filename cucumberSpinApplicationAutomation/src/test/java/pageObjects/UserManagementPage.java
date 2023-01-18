@@ -1,4 +1,4 @@
-package pageObjects;
+	package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +25,7 @@ public class UserManagementPage {
 	By UserMustChangePasswordOnNextLogin = By.xpath("//input[@id='UserInfo.PasswordMustChangeInd']");
 	By ChangePasswordButton = By.xpath("//a[@id='ResetPassword']");
 	By PasswordChangedSuccess = By.xpath("//div[@id='GenericBusinessError']");
+	By AddUser = By.xpath("//span[contains(text(),'Add User')]");
 			
 	//action methods for spin home page
 	
@@ -66,6 +67,11 @@ public class UserManagementPage {
 	public void ChangePasswordButton () {
 		
 		driver.findElement(ChangePasswordButton).click();
+	}
+	
+	public void AddUser () {
+		
+		driver.findElement(AddUser).click();
 	}
 	
 	// Validation Password Change Text

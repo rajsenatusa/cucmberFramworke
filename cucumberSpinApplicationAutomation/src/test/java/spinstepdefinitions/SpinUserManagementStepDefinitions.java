@@ -1,9 +1,6 @@
 package spinstepdefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageObjects.LoginPage;
@@ -29,14 +26,7 @@ public class SpinUserManagementStepDefinitions {
 		this.userManagementPage = testContextSetup.ObjectManager.getUserManagementPage();
 
 	}	       
-	   
-	    @And("^navigate to admin > user management screen$")
-	    public void navigate_to_admin_user_management_screen() throws Throwable {
-	    	
-	    	userManagementPage.AdminMenuClick();
-	    	userManagementPage.UserManagementClick();
-	    }
-
+	    // Reset Password Step Definitions starts here..
 	    @And("^Search the user (.+)$")
 	    public void search_the_user(String searchuser) throws Throwable {
 	    	
@@ -67,8 +57,21 @@ public class SpinUserManagementStepDefinitions {
 	    	userManagementPage.validationPasswordChangeText();	    	
 	    	System.out.println("USER PASSWORD CHANGED SUCCESSFULLY");
 	    }
+	    
+	    // Add User Step Definitions starts here..
 	    	
+	    @And("^Go to add user screen$")	    
+	    public void go_to_add_user_screen() throws Throwable {
+	        userManagementPage.AddUser();
+	    }
+	    	    
+	    @And("^navigate to admin > user management screen$")
+	    public void navigate_to_admin_user_management_screen() throws Throwable {
 	    	
-	    		  
-    
+	    	userManagementPage.AdminMenuClick();
+	    	userManagementPage.UserManagementClick();
+	    }
+	   
+
 }
+

@@ -11,8 +11,6 @@ import pageObjects.LoginPage;
 import pageObjects.ObjectManager;
 import spinUtils.TestContextSetup;
 
-
-
 public class LoginStepDefinitions {
 	
 	//container creating dependency injection.
