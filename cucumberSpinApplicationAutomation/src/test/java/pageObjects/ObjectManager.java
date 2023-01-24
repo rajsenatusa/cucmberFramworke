@@ -9,6 +9,7 @@ public class ObjectManager {
 	public  BatchJobsPage BatchJobsPage;
 	public  UserManagementPage UserManagementPage;
 	public  UserMaintenancePage UserMaintenancePage;
+	public  ClaimMaintenancePage ClaimMaintenancePage;
 	public  WebDriver driver;
 	
 	public ObjectManager (WebDriver driver) {
@@ -39,6 +40,11 @@ public class ObjectManager {
 	public UserMaintenancePage getUserMainteanacePage() {		
 		UserMaintenancePage = new UserMaintenancePage(driver);
 		return UserMaintenancePage;
+	}
+	
+	public ClaimMaintenancePage getClaimMainteanacePage() {		
+		ClaimMaintenancePage = new ClaimMaintenancePage(driver);
+		return ClaimMaintenancePage;
 	}
 }
 

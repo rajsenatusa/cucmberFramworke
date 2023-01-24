@@ -13,5 +13,3 @@ Feature: Spin Application Login Feature
       | ag1730     | Winter@2022 	|
       | ag8134     | Winter@2022 	|
       | jlowe      | Winter@2023 	|
-
-    
