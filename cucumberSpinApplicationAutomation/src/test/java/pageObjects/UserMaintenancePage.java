@@ -1,5 +1,7 @@
 	package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +23,8 @@ public class UserMaintenancePage {
 	By UserCode_SearchBtn = By.xpath("//a[@id='SearchUser']");
 	By AddUser = By.xpath("//span[contains(text(),'Add User')]");
 	
-	By UserCodeLoginId = By.xpath("//input[@id='UserInfo.LoginId']");	
+	By UserCodeLoginId = By.xpath("//input[@id='LoginId']");
+	By UserCodeSearchBtn = By.xpath("//a[@id='SearchUser']");
 	By UserType = By.xpath("//select[@id='UserInfo.TypeCd']");	
 	By ConcurrentSessions = By.xpath("//input[@id='UserInfo.ConcurrentSessions']");
 	By Status = By.xpath("//select[@id='UserInfo.StatusCd']");
@@ -47,19 +50,21 @@ public class UserMaintenancePage {
 	By ConfirmPassword = By.xpath("//input[@id='ConfirmPassword']");
 	By PasswordPolicy = By.xpath("//select[@id='PasswordInfo.PasswordRequirementTemplateId']");
 	By BranchCode = By.xpath("//select[@id='UserInfo.BranchCd']");	
-	By SaveBtn = By.xpath("//a[@id='Save']");
+	By UserMaintenanceSaveBtn = By.xpath("//a[@id='Save']");
 	
 	By UserMustChagePasswordOnNextLogin = By.xpath("//input[@id='UserInfo.PasswordMustChangeInd']");
 	By addRole = By.xpath("//a[@id='AddRole']");
-	By SelectRole = By.xpath("//select[@id='UserRole.AuthorityRoleIdRef']");
 	By VerifiedStatusImgText = By.xpath("//tbody/tr[1]/td[1]/i[2]/span[1]");
 	
 	By MissingInfo = By.xpath("//div[@id='MissingFieldError']");
 	By UserInfoText = By.xpath("//span[@id='UserInfo.LoginId_text']");
 	By UserAuthRole = By.xpath("//select[@id='UserRole.AuthorityRoleIdRef']");
 	
-	By UserRoleDescription = By.xpath("//td[contains(text(),'Administrator Role for Everything')]");	
 	By InformationMsg = By.xpath("//div[@id='FieldConstraintError']");
+	
+	By ProviderNumber = By.xpath("//input[@id='ProviderNumber']");
+	
+	//td[@id='ajaxReplaceForm']
 
 	
 	
@@ -73,6 +78,7 @@ public class UserMaintenancePage {
 		
 		public void enterUserCode (String usercode) {
 			
+			driver.findElement(UserCode).clear();
 			driver.findElement(UserCode).sendKeys(usercode);
 				
 		}
@@ -159,7 +165,7 @@ public class UserMaintenancePage {
 		}
 
 		public void enterPrimaryPhone (String primaryphonenumber) {
-				
+			driver.findElement(UserInfoPhoneOne).clear();	
 			driver.findElement(UserInfoPhoneOne).sendKeys(primaryphonenumber);
 		}
 
@@ -226,14 +232,20 @@ public class UserMaintenancePage {
 			Select SelectBranchCode = new Select  (driver.findElement(BranchCode));
 			SelectBranchCode.selectByValue(branchcode);
 		}
+		
+		public void enterProviderCodeNumber (String ProviderCode) {
+			
+			WebDriverWait wait = new WebDriverWait(driver, 90);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(ProviderNumber));	
+			driver.findElement(ProviderNumber).sendKeys(ProviderCode);
+			
+		}
 
 		
-		public void clickOnSaveButton() {
-			
+		public void clickOnUserMaintenaceSaveButton() {
 
-			driver.findElement(SaveBtn).click();
-			WebDriverWait wait = new WebDriverWait(driver, 90);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(UserInfoText));	
+			driver.findElement(UserMaintenanceSaveBtn).click();			
+
 		
 		}
 		
@@ -244,13 +256,15 @@ public class UserMaintenancePage {
 			
 		}
 		
-		public void userSuccessValidation () {
+		public void verificationOfUserCreation () {
 			
+			WebDriverWait wait = new WebDriverWait(driver, 90);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(UserInfoText));
 			WebElement createdUser = driver.findElement(UserInfoText);
 			String ExpectedUserText = createdUser.getAttribute("innerHTML");
-			String createdUserText = ExpectedUserText.trim();		
-			System.out.println("User Created Successfully:" +createdUserText);		
+			String createdUserText = ExpectedUserText.trim();					
 			Assert.assertTrue(ExpectedUserText.equalsIgnoreCase(createdUserText));
+			System.out.println("User Created Successfully:" +createdUserText);	
 			
 					
 		}
@@ -261,16 +275,50 @@ public class UserMaintenancePage {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(addRole));	
 			driver.findElement(addRole).click();			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(UserAuthRole));	
+			
 			Select SelectAuthorityRole = new Select (driver.findElement(UserAuthRole));
-			SelectAuthorityRole.selectByValue(userrole);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(UserRoleDescription));
-			wait.until(ExpectedConditions.visibilityOfElementLocated(SaveBtn));
-			driver.findElement(SaveBtn).click();
+			List <WebElement> all_options = SelectAuthorityRole.getOptions();
+			Boolean found = false;
+			
+			for (WebElement eachWebElement : all_options) {
+				
+					String roleDropdown  = eachWebElement.getAttribute("innerHTML");
+					//System.out.println("Value from the Drop Down :" +roleDropdown);
+					
+					if ( roleDropdown.equalsIgnoreCase(userrole)) {
+
+						SelectAuthorityRole.selectByVisibleText(userrole);
+						found = true;
+						break;
+					}						
+			}
+			if (found) {
+				System.out.println("The Role " + userrole + " Found and Selected Successfully");
+			}
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'"+userrole+"')]")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(UserMaintenanceSaveBtn));
+			driver.findElement(UserMaintenanceSaveBtn).click();
 			System.out.println(userrole+ " Access Given Successfully" );
 			
 		}
 
-		
+		 public void searchExistingUser(String searchexistinguser) {
+			 
+			 driver.findElement(UserCodeLoginId).sendKeys(searchexistinguser);
+			 
+		 }
+		 
+		 public void clickOnUserCodeSearchBtn () {
+			 driver.findElement(UserCodeSearchBtn).click();
+		 }
+		 
+		 public void clickOnCopyUserProfile() {
+			 
+			 driver.findElement(Copy).click();
+			 
+		 }
+			
 			
 
 
