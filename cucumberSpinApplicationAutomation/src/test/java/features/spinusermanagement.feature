@@ -38,7 +38,7 @@ Feature: Spin Application User Management Feature
 
     Examples: 
       | username    | password     | UserCode  		 | UserType       | ConcurrentSessions | Status | Language | FirstName | LastName  | Address                    | City  | State | Zip        | Country       | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress      			  | Department | SupervisorCode | ToolbarSearchMode | Password    | ConfirmPassword | PasswordPolicy | ProviderCode | BranchCode  | UserRole     |
-      | gallopadmin | Winter@2022! | TMcDonald		 | Company Claims |                 1	 | Active | en_US    | Trevor		 | McDonald	 | 5426 Bay Center Dr STE 600 | Tampa | FL    | 33609-3440 | United States | Business           | (813) 880-7000     | TMcDonald@aiiflorida.com | Claims     | JRitchie			  | None         		  | Winter@2023 | Winter@2023     | StandardUser   | CA0CV        | Home Office | VP of Claims |
+      | gallopadmin | Winter@2022! | BVazquez			 | Company Claims |                 20 | Active | en_US    | Trevor		 | McDonald	 | 5426 Bay Center Dr STE 600 | Tampa | FL    | 33609-3440 | United States | Business           | (813) 880-7000     | TMcDonald@aiiflorida.com | Claims     | JRitchie			  | None         		  | Winter@2023 | Winter@2023     | StandardUser   | CA0CV        | Home Office | VP of Claims |
 
 
 	@AddUserCompany
