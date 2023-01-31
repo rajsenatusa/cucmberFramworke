@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions (
 		features = "src\\test\\java\\features",
 		glue = "spinstepdefinitions", 
-		tags= "@AddUserCompany", 
+		tags= "@Login", 
 		
 //		dryRun = true, // step definition implementation check
 		monochrome = true, // test results in console formatted
@@ -25,7 +25,7 @@ public class TestNGTestRunner extends AbstractTestNGCucumberTests   {
 	
 
 	@Override
-	@DataProvider (parallel =false)
+	@DataProvider (parallel =true)
 	public Object[][] scenarios () {
 		
 		return super.scenarios();
