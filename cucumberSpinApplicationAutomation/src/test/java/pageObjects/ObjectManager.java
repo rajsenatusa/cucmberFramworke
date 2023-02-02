@@ -10,6 +10,7 @@ public class ObjectManager {
 	public  UserManagementPage UserManagementPage;
 	public  UserMaintenancePage UserMaintenancePage;
 	public  ClaimMaintenancePage ClaimMaintenancePage;
+	public  DataBasePage DataBasePage;
 	public  WebDriver driver;
 	
 	public ObjectManager (WebDriver driver) {
@@ -45,6 +46,11 @@ public class ObjectManager {
 	public ClaimMaintenancePage getClaimMainteanacePage() {		
 		ClaimMaintenancePage = new ClaimMaintenancePage(driver);
 		return ClaimMaintenancePage;
+	}
+	
+	public DataBasePage getDataBasePage() {		
+		DataBasePage = new DataBasePage(driver);
+		return DataBasePage;
 	}
 }
 
