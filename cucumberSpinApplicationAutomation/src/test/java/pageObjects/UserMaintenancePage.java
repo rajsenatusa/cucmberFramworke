@@ -171,6 +171,7 @@ public class UserMaintenancePage {
 
 		public void enterEmailAddress(String emailaddress ) {
 			
+			driver.findElement(EmailAddres).clear();
 			driver.findElement(EmailAddres).sendKeys(emailaddress);
 			
 		}

@@ -109,6 +109,7 @@ public class SpinUserMaintenanceStepDefinitions {
         
         @And("^Enter the Email Address : (.+)$")
         public void enter_the_email_address(String emailaddress) throws Throwable {
+        	
         	userMaintenancePage.enterEmailAddress(emailaddress);
 
         }
