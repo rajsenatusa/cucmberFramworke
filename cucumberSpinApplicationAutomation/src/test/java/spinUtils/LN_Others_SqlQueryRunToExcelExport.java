@@ -19,7 +19,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.Row;
 
-public class SqlQueryRunToExcelExport {
+public class LN_Others_SqlQueryRunToExcelExport {
 	
 	public static String url= null;
 	public static String user= null;
@@ -27,7 +27,7 @@ public class SqlQueryRunToExcelExport {
 	public static String resultFileName = null;
 	public static String query =null;
 
-	public static void main() throws Throwable {
+	public static void main(String[] args) throws Throwable {
 		
 		// get the result file name			
 			resultFileName = getFilename(resultFileName);	
@@ -95,7 +95,7 @@ public class SqlQueryRunToExcelExport {
 	private static String getFilename(String resultFileName) {
 		
 		LocalDateTime now = LocalDateTime.now();  
-		String returnResultFilename="ER_Request_Results-"+now.getYear()+"-"+now.getMonth()+"-"+now.getDayOfMonth()+"-"+now.getHour()+"-"+now.getMinute()+"-"+now.getSecond()+".xls";
+		String returnResultFilename="LN_Others_Results-"+now.getYear()+"-"+now.getMonth()+"-"+now.getDayOfMonth()+"-"+now.getHour()+"-"+now.getMinute()+"-"+now.getSecond()+".xls";
 		return returnResultFilename;
 	}
 

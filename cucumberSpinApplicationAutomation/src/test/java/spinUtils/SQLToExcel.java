@@ -158,8 +158,8 @@ public class SQLToExcel {
 				HSSFFont headerFont = workbook.createFont();
 				headerFont.setBold(true);
 				headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-                headerStyle.setFillForegroundColor(HSSFColor.PALE_BLUE.index);
-                headerStyle.setFillBackgroundColor(HSSFColor.WHITE.index);
+//                headerStyle.setFillForegroundColor(HSSFColor.PALE_BLUE.index);
+//                headerStyle.setFillBackgroundColor(HSSFColor.WHITE.index);
                 headerStyle.setFont(headerFont);
                 
 
