@@ -100,11 +100,11 @@ Feature: Spin Application User Management Feature
     Then Verify User Successfully Created
 
     Examples: 
-      | username    | password     | SearchExistingUser | UserCode   | FirstName | LastName  | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             | Password    | ConfirmPassword |
-      | gallopadmin | Winter@2022! | PKnowles           | rlayne     | Ryan      | Layne     | Business           | (662) 397-2301     | rlayne@vcsclaims.com     | Winter@2023 | Winter@2023     |
-      | gallopadmin | Winter@2022! | PKnowles           | Mmattammal | Mike      | Mattammal | Business           | (737) 443-0821     | Mmattammal@vcsclaims.com | Winter@2023 | Winter@2023     |
-      | gallopadmin | Winter@2022! | PKnowles           | Jim        | Jim       | Townsend  | Business           | (512) 964-1751     | jim@vcsclaims.com        | Winter@2023 | Winter@2023     |
-      | gallopadmin | Winter@2022! | PKnowles           | Dgackle    | David     | Gackle    | Business           | (970) 219-9815     | Dgackle@vcsclaims.com    | Winter@2023 | Winter@2023     |
+      | username    | password     | SearchExistingUser | UserCode 	   | FirstName   | LastName 	 | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             		| Password    | ConfirmPassword |
+      | gallopadmin | March@2023!	 | srajendran        	| mcemek 			| mcemek	     | mcemek	     | Business           | (813) 512-6664     | mcemek@aiiflorida.com			| April@2023! | April@2023!     |
+
+
+      
 
   @ResetUserPassword
   Scenario Outline: As a SPIN adminuser, I should be able to reset password for users
@@ -117,18 +117,44 @@ Feature: Spin Application User Management Feature
     And Enter <newpassword> and click on change password
     Then Verify password Changed Successfully
 
-    Examples: 
-      | username    | password    | searchuser | newpassword |
-      | gallopadmin | Winter2023! | OB24USER1  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER2  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER3  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER4  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER5  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER6  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER7  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER8  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER9  | Feb@2023!   |
-      | gallopadmin | Winter2023! | OB24USER10 | Feb@2023!   |
+     Examples: 
+	  	| username    | password    | searchuser 		 	 		| newpassword 	|
+      | gallopadmin | March@2023! | bkudela		 		 	 	  | April@2023!   |
+      | gallopadmin | March@2023! | kdavis		 		   		| April@2023!   |
+      | gallopadmin | March@2023! | dcohen		 		   		| April@2023!   |
+      | gallopadmin | March@2023! | mgupta	   		 	 		| April@2023!   |
+      | gallopadmin | March@2023! | npoku	   		 	 		  | April@2023!   |
+      | gallopadmin | March@2023! | svenigalla  	 	 		| April@2023!   |
+      | gallopadmin | March@2023! | jrogers1   		 	 		| April@2023!   |
+      | gallopadmin | March@2023! | nzachariah		 	    | April@2023!   |
+      | gallopadmin | March@2023! | kshaik		 		   		| April@2023!   |
+      | gallopadmin | March@2023! | pvispute	 		   		| April@2023!   |
+      | gallopadmin | March@2023! | jscrape		 		 		  | April@2023!   |
+      | gallopadmin | March@2023! | aortiz		 		   		| April@2023!   |
+      | gallopadmin | March@2023! | lrallo	 		 	 		  | April@2023!   |
+      | gallopadmin | March@2023! | mkaplan		 		   		| April@2023!   |
+      | gallopadmin | March@2023! | jgriffin	 		   		| April@2023!   |
+      | gallopadmin | March@2023! | cyavas		 		   		| April@2023!   | 
+      | gallopadmin | March@2023! | tpeck		 		   		  | April@2023!   |    
+      | gallopadmin | March@2023! | ckriss		 				  | April@2023!   |
+      | gallopadmin | March@2023! | jritchie		 		  	| April@2023!   |
+      | gallopadmin | March@2023! | mharris		 		 	 	  | April@2023!   |
+      | gallopadmin | March@2023! | striplett	 		 	 	  | April@2023!   |
+      | gallopadmin | March@2023! | jkossmann	 		 		  | April@2023!   |
+      | gallopadmin | March@2023! | mcemek	 	 		 	 	  | April@2023!   |
+      | gallopadmin | March@2023! | bwhite	 		 	 		  | April@2023!   |
+      | gallopadmin | March@2023! | ccowell		   	 	 		| April@2023!   |
+      | gallopadmin | March@2023! | ggahrman		 	 			| April@2023!   |
+      | gallopadmin | March@2023! | ldynda		 	 	 			| April@2023!   |
+      | gallopadmin | March@2023! | csruw1	 		 	 	 		| April@2023!   |
+      | gallopadmin | March@2023! | csruwmgr1 	 	 	 		| April@2023!   |
+      | gallopadmin | March@2023! | Claimmgr1 	 	 	 		| April@2023!   |
+      | gallopadmin | March@2023! | VillageAgent 	 	 		| April@2023!   |
+      | gallopadmin | March@2023! | csruw2		 		 			| April@2023!   |
+      | gallopadmin | March@2023! | csruw3		 		 	 		| April@2023!   |
+      | gallopadmin | March@2023! | csruw4		 		 	 		| April@2023!   |
+      | gallopadmin | March@2023! | TCRENSHAW	 		 	 		| April@2023!   |
+
 
   @UpdateUsers
   Scenario Outline: As a SPIN adminuser, I should to update concurrent session and email address of specific user.
