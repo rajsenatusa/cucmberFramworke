@@ -100,9 +100,24 @@ Feature: Spin Application User Management Feature
     Then Verify User Successfully Created
 
     Examples: 
-      | username    | password     | SearchExistingUser | UserCode 	   | FirstName   | LastName 	 | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             		| Password    | ConfirmPassword |
-      | gallopadmin | March@2023!	 | srajendran        	| mcemek 			| mcemek	     | mcemek	     | Business           | (813) 512-6664     | mcemek@aiiflorida.com			| April@2023! | April@2023!     |
-
+      | username    | password     | SearchExistingUser | UserCode 	   		| FirstName   	 | LastName 	   | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             		| Password     | ConfirmPassword  |
+      | gallopadmin | AiiG@2070		 | srajendran        	| rpasala 	   		| rpasala  	     | rpasala 		   | Business           | (813) 512-6664     | rpasala@aiiflorida.com		 	  | June@2023! 	 | June@2023!       |
+      | gallopadmin | AiiG@2070		 | srajendran        	| HafeezShaik 		| HafeezShaik    | HafeezShaik   | Business           | (813) 512-6664     | HafeezShaik@aiiflorida.com		| June@2023! 	 | June@2023!       |
+	  	| gallopadmin | AiiG@2070		 | srajendran        	| mcemek 					| mcemek	     	 | mcemek	       | Business           | (813) 512-6664     | mcemek@aiiflorida.com			  | June@2023! 	 | June@2023!       |
+	  	| gallopadmin | AiiG@2070		 | srajendran        	| Asakamuri				| Asakamuri	     | Asakamuri     | Business           | (813) 512-6664     | asakamuri@aiiflorida.com		  | June@2023! 	 | June@2023!       |
+	  	| gallopadmin | AiiG@2070		 | srajendran        	| Vzaveri					| Vzaveri	     	 | Vzaveri	     | Business           | (813) 512-6664     | vzaveri@aiiflorida.com			  | June@2023! 	 | June@2023!       |	  	
+	  	| gallopadmin | AiiG@2070		 | DBEATTIE           | Adjuster1	    	| Adjuster1   	 | Adjuster1 		 | Business           | (813) 512-6664     | Adjuster1@aiiflorida.com 		| June@2023!   | June@2023!    	  | 
+      | gallopadmin | AiiG@2070		 | JFOSTER            | Adjuster2				| Adjuster2   	 | Adjuster2 		 | Business           | (737) 443-0821     | JFoster@aiicfl.com			  		| June@2023!   | June@2023!    	  |
+      | gallopadmin | AiiG@2070		 | LZALANSKY          | Adjuster3	   		| Adjuster3   	 | Adjuster3 		 | Business           | (813) 880-7059     | lzalansky@aiiflorida.com 		| June@2023!   | June@2023!    	  |
+      | gallopadmin | AiiG@2070		 | BSMITS           	| Billing1	   		| Billing1    	 | Billing1  		 | Business           | (970) 219-9815     | Billing1@aiiflorida.com  		| June@2023!   | June@2023!	      |
+      | gallopadmin | AiiG@2070		 | TWATSON           	| BillingMgr			| BillingMgr	 	 | BillingMgr		 | Business           | (970) 219-9815     | Billing1@aiiflorida.com  		| June@2023!   | June@2023!	      |
+      | gallopadmin | AiiG@2070		 | TCRENSHAW        	| Accounting			| Accounting	   | Accounting		 | Business           | (970) 219-9815     | Billing1@aiiflorida.com  		| June@2023!   | June@2023!	      |
+      | gallopadmin | AiiG@2070		 | JLowe		       	  |	Underwriter1		| Underwriter1	 | Accounting		 | Business           | (970) 219-9815     | Underwriter1@aiiflorida.com  | June@2023!   | June@2023!	  	  |
+      | gallopadmin | AiiG@2070		 | MKOZIEL		       	| uwmanager1    	| uwmanager1	   | uwmanager1		 | Business           | (970) 219-9815     | uwmanager1@aiiflorida.com	  | June@2023!   | June@2023!	  	  |
+      | gallopadmin | AiiG@2070		 | JFOSTER		       	| csruw1 					| csruw1		     | csruw1		  	 | Business           | (970) 219-9815     | csruw1@aiiflorida.com	 			| June@2023!   | June@2023!	  	  |
+      | gallopadmin | AiiG@2070		 | Wdennis		       	| Claimmgr1	 			| Claimmgr1	 	   | Claimmgr1 	 	 | Business           | (970) 219-9815     | Claimmgr1@aiiflorida.com	 		| June@2023!   | June@2023!	  	  |
+	  
+      
 
       
 
@@ -118,42 +133,28 @@ Feature: Spin Application User Management Feature
     Then Verify password Changed Successfully
 
      Examples: 
-	  	| username    | password    | searchuser 		 	 		| newpassword 	|
-      | gallopadmin | March@2023! | bkudela		 		 	 	  | April@2023!   |
-      | gallopadmin | March@2023! | kdavis		 		   		| April@2023!   |
-      | gallopadmin | March@2023! | dcohen		 		   		| April@2023!   |
-      | gallopadmin | March@2023! | mgupta	   		 	 		| April@2023!   |
-      | gallopadmin | March@2023! | npoku	   		 	 		  | April@2023!   |
-      | gallopadmin | March@2023! | svenigalla  	 	 		| April@2023!   |
-      | gallopadmin | March@2023! | jrogers1   		 	 		| April@2023!   |
-      | gallopadmin | March@2023! | nzachariah		 	    | April@2023!   |
-      | gallopadmin | March@2023! | kshaik		 		   		| April@2023!   |
-      | gallopadmin | March@2023! | pvispute	 		   		| April@2023!   |
-      | gallopadmin | March@2023! | jscrape		 		 		  | April@2023!   |
-      | gallopadmin | March@2023! | aortiz		 		   		| April@2023!   |
-      | gallopadmin | March@2023! | lrallo	 		 	 		  | April@2023!   |
-      | gallopadmin | March@2023! | mkaplan		 		   		| April@2023!   |
-      | gallopadmin | March@2023! | jgriffin	 		   		| April@2023!   |
-      | gallopadmin | March@2023! | cyavas		 		   		| April@2023!   | 
-      | gallopadmin | March@2023! | tpeck		 		   		  | April@2023!   |    
-      | gallopadmin | March@2023! | ckriss		 				  | April@2023!   |
-      | gallopadmin | March@2023! | jritchie		 		  	| April@2023!   |
-      | gallopadmin | March@2023! | mharris		 		 	 	  | April@2023!   |
-      | gallopadmin | March@2023! | striplett	 		 	 	  | April@2023!   |
-      | gallopadmin | March@2023! | jkossmann	 		 		  | April@2023!   |
-      | gallopadmin | March@2023! | mcemek	 	 		 	 	  | April@2023!   |
-      | gallopadmin | March@2023! | bwhite	 		 	 		  | April@2023!   |
-      | gallopadmin | March@2023! | ccowell		   	 	 		| April@2023!   |
-      | gallopadmin | March@2023! | ggahrman		 	 			| April@2023!   |
-      | gallopadmin | March@2023! | ldynda		 	 	 			| April@2023!   |
-      | gallopadmin | March@2023! | csruw1	 		 	 	 		| April@2023!   |
-      | gallopadmin | March@2023! | csruwmgr1 	 	 	 		| April@2023!   |
-      | gallopadmin | March@2023! | Claimmgr1 	 	 	 		| April@2023!   |
-      | gallopadmin | March@2023! | VillageAgent 	 	 		| April@2023!   |
-      | gallopadmin | March@2023! | csruw2		 		 			| April@2023!   |
-      | gallopadmin | March@2023! | csruw3		 		 	 		| April@2023!   |
-      | gallopadmin | March@2023! | csruw4		 		 	 		| April@2023!   |
-      | gallopadmin | March@2023! | TCRENSHAW	 		 	 		| April@2023!   |
+			  | username    | password    | searchuser 			  	| newpassword  |
+	      | gallopadmin | AiiG@2070		| AG1730		 		 	 		| June@2023!   |
+     		| gallopadmin | AiiG@2070   | AG1171	 		   			| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| AG1529		 		   		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| AG6718	   		 	 		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| AG8134	   		 	 		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| AG0005	   		 	 		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| AG5959	   		 	 		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| JLOWE			 	     		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| MKOZIEL		 		   		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| JFOSTER		 		   		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| PKNOWLES	 		 			| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| DBEATTIE	 		   		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| TWilliamsD 		 	 		| June@2023!   |
+     	 	| gallopadmin | AiiG@2070 	| LZALANSKY	 		   		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| BSMITS		 		   		| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| TWATSON		 		   		| June@2023!   | 
+      	| gallopadmin | AiiG@2070 	| TCRENSHAW	 		   		| June@2023!   |    
+      	| gallopadmin | AiiG@2070 	| pmadigan	 					| June@2023!   |
+      	| gallopadmin | AiiG@2070 	| Wdennis		 		 	 		| June@2023!   |
+	  		| gallopadmin | AiiG@2070 	| Zglover	 	 	 	 			| June@2023!   |
+	  		| gallopadmin | AiiG@2070 	| Aallen	 	 	 	 			| June@2023!   |
 
 
   @UpdateUsers
