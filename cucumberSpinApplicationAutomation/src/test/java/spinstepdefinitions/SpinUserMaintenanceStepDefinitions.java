@@ -142,9 +142,10 @@ public class SpinUserMaintenanceStepDefinitions {
 
         @And("^Select User Must Change Password On Next Login$")
         public void select_user_must_change_password_on_next_login() throws Throwable {
-        	userMaintenancePage.clickOnUserMuchChangePasswordOnNextLogin();      	
+         	userMaintenancePage.clickOnUserMuchChangePasswordOnNextLogin();      	
         }
-
+        
+   
         @And("^Select Password Policy : (.+)$")
         public void select_password_policy(String passwordpolicy) throws Throwable {
         	userMaintenancePage.selectPasswordPolicy(passwordpolicy);

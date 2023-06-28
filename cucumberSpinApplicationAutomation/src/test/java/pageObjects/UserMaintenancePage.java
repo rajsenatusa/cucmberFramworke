@@ -1,8 +1,10 @@
 	package pageObjects;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -215,8 +217,10 @@ public class UserMaintenancePage {
 		
 		public void clickOnUserMuchChangePasswordOnNextLogin() {
 			
-			
-			driver.findElement(UserMustChagePasswordOnNextLogin).click();
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+			WebDriverWait wait = new WebDriverWait(driver, 90);
+			WebElement e1 = wait.until(ExpectedConditions.elementToBeClickable(UserMustChagePasswordOnNextLogin));
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", e1);			
 		}
 
 
