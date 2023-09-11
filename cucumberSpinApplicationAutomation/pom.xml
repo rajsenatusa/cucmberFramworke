@@ -36,17 +36,19 @@
 			    <version>6.9.1</version>
 			</dependency>
 			    
-		    <!-- TestNG Test Runner-->	    
+		    <!-- TestNG Test Runner -->  
 		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-testng</artifactId>
 			    <version>6.9.1</version>
 			</dependency>
+	
 		
 			  		    		 
 		    <!-- Junit Test Runner-->
-		    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit 			
+			<!-- 
 			<dependency>
 			    <groupId>io.cucumber</groupId>
 			    <artifactId>cucumber-junit</artifactId>
@@ -60,7 +62,7 @@
 			<dependency>
 			    <groupId>io.github.bonigarcia</groupId>
 			    <artifactId>webdrivermanager</artifactId>
-			    <version>5.3.0</version>
+			    <version>5.5.2</version>
 			</dependency>
 			
 			<!-- org.seleniumhq.selenium/selenium-java -->

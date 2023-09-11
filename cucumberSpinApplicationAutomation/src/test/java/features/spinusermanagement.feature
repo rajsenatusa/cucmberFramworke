@@ -102,18 +102,19 @@ Feature: Spin Application User Management Feature
 
     Examples: 
       | username    | password     | SearchExistingUser | UserCode 	   		| FirstName   	 | LastName 	   | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             			| PasswordPolicy  | Password     | ConfirmPassword  |
-      | gallopadmin | AiiG@2070		 | TWATSON           	| BillingMgr		  | BillingMgr	 	 | BillingMgr	   | Business           | (970) 219-9815     | Billing1@aiiflorida.com  			| StandardUser  | July@2023!   | July@2023!    	  |           
-      | gallopadmin | AiiG@2070		 | TCRENSHAW        	| Accounting			| Accounting	 	 | Accounting		 | Business           | (970) 219-9815     | Billing1@aiiflorida.com  			| StandardUser  | July@2023!   | July@2023!    	  |           
-      | gallopadmin | AiiG@2070		 | JLowe		       		| Underwriter1 		| Underwriter1	 | Accounting		 | Business           | (970) 219-9815     | Underwriter1@aiiflorida.com  	| StandardUser  | July@2023!   | July@2023!    	  |           
-      | gallopadmin | AiiG@2070		 | MKOZIEL		       	| uwmanager1      | uwmanager1	   | uwmanager1		 | Business           | (970) 219-9815     | uwmanager1@aiiflorida.com	  	| StandardUser  | July@2023!   | July@2023!    	  |          
-      | gallopadmin | AiiG@2070		 | JFOSTER		       	| csruw1 					| csruw1		     | csruw1				 | Business           | (970) 219-9815     | csruw1@aiiflorida.com	 				| StandardUser  | July@2023!   | July@2023!    	  |           
-      | gallopadmin | AiiG@2070		 | Wdennis		       	| Claimmgr1	 			| Claimmgr1	 	   | Claimmgr1 		 | Business           | (970) 219-9815     | Claimmgr1@aiiflorida.com	 			| StandardUser  | July@2023!   | July@2023!    	  |          
-      | gallopadmin | AiiG@2070		 | srajendran        	| rpasala 	   		| rpasala  	     | rpasala 		 	 | Business           | (813) 512-6664     | rpasala@aiiflorida.com		 		 	| StandardUser  | July@2023! 	 | July@2023!       |
-      | gallopadmin | AiiG@2070		 | srajendran        	| HafeezShaik 		| HafeezShaik    | HafeezShaik   | Business           | (813) 512-6664     | HafeezShaik@aiiflorida.com			| StandardUser  | July@2023! 	 | July@2023!       |
-	    | gallopadmin | AiiG@2070		 | srajendran        	| mcemek 					| mcemek	       | mcemek	     	 | Business           | (813) 512-6664     | mcemek@aiiflorida.com				  | StandardUser  | July@2023! 	 | July@2023!       |
-	    | gallopadmin | AiiG@2070		 | srajendran        	| Asakamuri				| Asakamuri	     | Asakamuri     | Business           | (813) 512-6664     | asakamuri@aiiflorida.com			  | StandardUser  | July@2023! 	 | July@2023!       |
-	    | gallopadmin | AiiG@2070		 | srajendran        	| Vzaveri					| Vzaveri	       | Vzaveri	     | Business           | (813) 512-6664     | vzaveri@aiiflorida.com				  | StandardUser  | July@2023! 	 | July@2023!       |
-
+      | gallopadmin | AiiG@2070	 | DBEATTIE           	| Adjuster1	    	| Adjuster1   	 | Adjuster1 		 | Business           | (813) 512-6664     | model@aiiflorida.com 				  | StandardUser		|	Sep@2023!    | Sep@2023!    	  |
+      | gallopadmin | AiiG@2070	 | JFOSTER            	| Adjuster2				| Adjuster2   	 | Adjuster2 		 | Business           | (737) 443-0821     | model@aiiflorida.com 					| StandardUser		|	Sep@2023!    | Sep@2023!    	  |
+      | gallopadmin | AiiG@2070	 | LZALANSKY          	| Adjuster3	   		| Adjuster3   	 | Adjuster3 		 | Business           | (813) 880-7059     | model@aiiflorida.com 	 				| StandardUser		|	Sep@2023!    | Sep@2023!    	  |
+      | gallopadmin | AiiG@2070	 | BSMITS           		| Billing1	   		| Billing1    	 | Billing1  		 | Business           | (970) 219-9815     | model@aiiflorida.com	  				| StandardUser		|	Sep@2023!    | Sep@2023!		   |
+      | gallopadmin | AiiG@2070	 | TWATSON           		| BillingMgr			| BillingMgr	 	 | BillingMgr		 | Business           | (970) 219-9815     | model@aiiflorida.com	 					| StandardUser		|	Sep@2023!    | Sep@2023!		   |
+      | gallopadmin | AiiG@2070	 | TCRENSHAW        		| Accounting			| Accounting	 	 | Accounting		 | Business           | (970) 219-9815     | model@aiiflorida.com	  				| StandardUser		|	Sep@2023!    | Sep@2023!		   |
+      | gallopadmin | AiiG@2070	 | JLowe		       			| Underwriter1 		| Underwriter1	 | Accounting		 | Business           | (970) 219-9815     | model@aiiflorida.com						| StandardUser		|	Sep@2023!		 | Sep@2023!		   |
+      | gallopadmin | AiiG@2070	 | MKOZIEL		       		| uwmanager1    	| uwmanager1	 	 | uwmanager1		 | Business           | (970) 219-9815     | model@aiiflorida.com						| StandardUser		|	Sep@2023!    | Sep@2023!		   |
+      | gallopadmin | AiiG@2070	 | JFOSTER		       		| csruw1 					| csruw1		 		 | csruw1			 	 | Business           | (970) 219-9815     | model@aiiflorida.com	 					| StandardUser		|	Sep@2023!    | Sep@2023!		   |
+      | gallopadmin | AiiG@2070	 | Wdennis		       		| Claimmgr1	 			| Claimmgr1	 	 	 | Claimmgr1 		 | Business           | (970) 219-9815     | model@aiiflorida.com						| StandardUser		|	Sep@2023!    | Sep@2023!	  	 |
+	  	| gallopadmin | AiiG@2070	 | srajendran        		| rpasala 	   		| rpasala  	     | rpasala 		 	 | Business           | (813) 512-6664     | rpasala@aiiflorida.com					| StandardUser		| Sep@2023! 	 | Sep@2023!        |
+      | gallopadmin | AiiG@2070	 | srajendran        		| HafeezShaik 		| HafeezShaik    | HafeezShaik   | Business           | (813) 512-6664     | HafeezShaik@aiiflorida.com			| StandardUser		| Sep@2023! 	 | Sep@2023!        |
+	  	| gallopadmin | AiiG@2070	 | srajendran        		| Vzaveri					| Vzaveri	     	 | Vzaveri	     | Business           | (813) 512-6664     | vzaveri@aiiflorida.com					| StandardUser		| Sep@2023! 	 | Sep@2023!        |
       
 
   @ResetUserPassword
@@ -128,44 +129,16 @@ Feature: Spin Application User Management Feature
     Then Verify password Changed Successfully
 
      Examples: 
-      | username    | password    | searchuser 		| newpassword 	|
-	  	| gallopadmin | AiiG@2070   | bkudela				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   | kdavis				| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	dcohen				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   | mgupta				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	svenigalla		| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jrogers1			| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	rpasala				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	nzachariah		| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   | kshaik				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	pvispute			| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jscrape				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	aortiz				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	lrallo				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	mkaplan				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jgriffin			| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	cyavas				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	tpeck					| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	ckriss				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jritchie			| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	mharris				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	striplett			| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jkossmann			| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	mcemek				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	bwhite				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	Wdennis				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	ccowell				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	ggahrman			| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	ldynda				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jbarnes				| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	tbrydon				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	ASakamuri			| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	vzaveri				| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	jburlett			| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	JBrock				| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	jwinslow			| July@2023! 	|	
-	  	| gallopadmin | AiiG@2070   |	djenkins			| July@2023! 	|
-	  	| gallopadmin | AiiG@2070   |	rfredericks		| July@2023! 	|
+      | username    | password  | searchuser 		  | newpassword 	|
+      | gallopadmin | AiiG@2070 | AG1171		 			| Sep@2023!     |
+      | gallopadmin | AiiG@2070 | AG1529		 			| Sep@2023!     |
+      | gallopadmin | AiiG@2070 | AG6718	   		 	| Sep@2023!     |
+      | gallopadmin | AiiG@2070 | AG8134	   		 	| Sep@2023!     |
+	  	| gallopadmin | AiiG@2070 | AG8735	   		 	| Sep@2023!     |
+	 	  | gallopadmin | AiiG@2070	| AG9077	   		 	| Sep@2023!     |
+      | gallopadmin | AiiG@2070 | AG0005	   		 	| Sep@2023!     |
+      | gallopadmin | AiiG@2070 | AG5959	   		 	| Sep@2023!     |
+      	
 
 
   @UpdateUsers
