@@ -1,4 +1,4 @@
-package cucumberOptions;
+package testRunners;
 
 import org.testng.annotations.DataProvider;
 

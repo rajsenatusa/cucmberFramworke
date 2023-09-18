@@ -129,15 +129,21 @@ Feature: Spin Application User Management Feature
     Then Verify password Changed Successfully
 
      Examples: 
-      | username    | password  | searchuser 		  | newpassword 	|
-      | gallopadmin | AiiG@2070 | AG1171		 			| Sep@2023!     |
-      | gallopadmin | AiiG@2070 | AG1529		 			| Sep@2023!     |
-      | gallopadmin | AiiG@2070 | AG6718	   		 	| Sep@2023!     |
-      | gallopadmin | AiiG@2070 | AG8134	   		 	| Sep@2023!     |
-	  	| gallopadmin | AiiG@2070 | AG8735	   		 	| Sep@2023!     |
-	 	  | gallopadmin | AiiG@2070	| AG9077	   		 	| Sep@2023!     |
-      | gallopadmin | AiiG@2070 | AG0005	   		 	| Sep@2023!     |
-      | gallopadmin | AiiG@2070 | AG5959	   		 	| Sep@2023!     |
+      | username    | password  	| searchuser 		  | newpassword 	|
+      | gallopadmin | July@2023!  | AG5959	   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | AG0676	   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | JLOWE		   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | MKOZIEL	   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | JFOSTER	   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | PKNOWLES	   		| Sep@2023!     |
+      | gallopadmin | July@2023!  | DBEATTIE	   		| Sep@2023!     |
+      | gallopadmin | July@2023!  | TWilliamsD	   	| Sep@2023!     |
+      | gallopadmin | July@2023!  | LZALANSKY	   		| Sep@2023!     |
+      | gallopadmin | July@2023!  | BSMITS	   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | TWATSON	   		 	| Sep@2023!     |
+      | gallopadmin | July@2023!  | TCRENSHAW	   		| Sep@2023!     |
+      | gallopadmin | July@2023!  | pmadigan	   		| Sep@2023!     |
+      | gallopadmin | July@2023!  | Wdennis	   		 	| Sep@2023!     |
       	
 
 
