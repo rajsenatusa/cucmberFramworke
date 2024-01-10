@@ -22,7 +22,7 @@ public class TestBase {
 				Properties prop = new Properties ();
 				prop.load(filename);
 				
-				String appUrL = prop.getProperty("QA1");
+				String appUrL = prop.getProperty("model");
 				String browser_properties = prop.getProperty("browser");
 				String browser_mvn = System.getProperty("browser");
 				String browser = browser_mvn!=null ? browser_mvn:browser_properties;
