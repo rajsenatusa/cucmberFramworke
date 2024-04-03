@@ -101,21 +101,20 @@ Feature: Spin Application User Management Feature
     Then Verify User Successfully Created
 
     Examples: 
-      | username    | password     | SearchExistingUser | UserCode 	   		| FirstName   	 | LastName 	   | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress             			| PasswordPolicy  | Password     | ConfirmPassword  |
-      | gallopadmin | AiiG@2070	 | DBEATTIE           	| Adjuster1	    	| Adjuster1   	 | Adjuster1 		 | Business           | (813) 512-6664     | model@aiiflorida.com 				  | StandardUser		|	Sep@2023!    | Sep@2023!    	  |
-      | gallopadmin | AiiG@2070	 | JFOSTER            	| Adjuster2				| Adjuster2   	 | Adjuster2 		 | Business           | (737) 443-0821     | model@aiiflorida.com 					| StandardUser		|	Sep@2023!    | Sep@2023!    	  |
-      | gallopadmin | AiiG@2070	 | LZALANSKY          	| Adjuster3	   		| Adjuster3   	 | Adjuster3 		 | Business           | (813) 880-7059     | model@aiiflorida.com 	 				| StandardUser		|	Sep@2023!    | Sep@2023!    	  |
-      | gallopadmin | AiiG@2070	 | BSMITS           		| Billing1	   		| Billing1    	 | Billing1  		 | Business           | (970) 219-9815     | model@aiiflorida.com	  				| StandardUser		|	Sep@2023!    | Sep@2023!		   |
-      | gallopadmin | AiiG@2070	 | TWATSON           		| BillingMgr			| BillingMgr	 	 | BillingMgr		 | Business           | (970) 219-9815     | model@aiiflorida.com	 					| StandardUser		|	Sep@2023!    | Sep@2023!		   |
-      | gallopadmin | AiiG@2070	 | TCRENSHAW        		| Accounting			| Accounting	 	 | Accounting		 | Business           | (970) 219-9815     | model@aiiflorida.com	  				| StandardUser		|	Sep@2023!    | Sep@2023!		   |
-      | gallopadmin | AiiG@2070	 | JLowe		       			| Underwriter1 		| Underwriter1	 | Accounting		 | Business           | (970) 219-9815     | model@aiiflorida.com						| StandardUser		|	Sep@2023!		 | Sep@2023!		   |
-      | gallopadmin | AiiG@2070	 | MKOZIEL		       		| uwmanager1    	| uwmanager1	 	 | uwmanager1		 | Business           | (970) 219-9815     | model@aiiflorida.com						| StandardUser		|	Sep@2023!    | Sep@2023!		   |
-      | gallopadmin | AiiG@2070	 | JFOSTER		       		| csruw1 					| csruw1		 		 | csruw1			 	 | Business           | (970) 219-9815     | model@aiiflorida.com	 					| StandardUser		|	Sep@2023!    | Sep@2023!		   |
-      | gallopadmin | AiiG@2070	 | Wdennis		       		| Claimmgr1	 			| Claimmgr1	 	 	 | Claimmgr1 		 | Business           | (970) 219-9815     | model@aiiflorida.com						| StandardUser		|	Sep@2023!    | Sep@2023!	  	 |
-	  	| gallopadmin | AiiG@2070	 | srajendran        		| rpasala 	   		| rpasala  	     | rpasala 		 	 | Business           | (813) 512-6664     | rpasala@aiiflorida.com					| StandardUser		| Sep@2023! 	 | Sep@2023!        |
-      | gallopadmin | AiiG@2070	 | srajendran        		| HafeezShaik 		| HafeezShaik    | HafeezShaik   | Business           | (813) 512-6664     | HafeezShaik@aiiflorida.com			| StandardUser		| Sep@2023! 	 | Sep@2023!        |
-	  	| gallopadmin | AiiG@2070	 | srajendran        		| Vzaveri					| Vzaveri	     	 | Vzaveri	     | Business           | (813) 512-6664     | vzaveri@aiiflorida.com					| StandardUser		| Sep@2023! 	 | Sep@2023!        |
-      
+      | username    | password  | SearchExistingUser | UserCode     | FirstName    | LastName    | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress               | PasswordPolicy | Password  | ConfirmPassword |
+      | gallopadmin | AiiG@2070 | DBEATTIE           | Adjuster1    | Adjuster1    | Adjuster1   | Business           | (813) 512-6664     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | JFOSTER            | Adjuster2    | Adjuster2    | Adjuster2   | Business           | (737) 443-0821     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | LZALANSKY          | Adjuster3    | Adjuster3    | Adjuster3   | Business           | (813) 880-7059     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | BSMITS             | Billing1     | Billing1     | Billing1    | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | TWATSON            | BillingMgr   | BillingMgr   | BillingMgr  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | TCRENSHAW          | Accounting   | Accounting   | Accounting  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | JLowe              | Underwriter1 | Underwriter1 | Accounting  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | MKOZIEL            | uwmanager1   | uwmanager1   | uwmanager1  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | JFOSTER            | csruw1       | csruw1       | csruw1      | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | Wdennis            | Claimmgr1    | Claimmgr1    | Claimmgr1   | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | srajendran         | rpasala      | rpasala      | rpasala     | Business           | (813) 512-6664     | rpasala@aiiflorida.com     | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | srajendran         | HafeezShaik  | HafeezShaik  | HafeezShaik | Business           | (813) 512-6664     | HafeezShaik@aiiflorida.com | StandardUser   | Sep@2023! | Sep@2023!       |
+      | gallopadmin | AiiG@2070 | srajendran         | Vzaveri      | Vzaveri      | Vzaveri     | Business           | (813) 512-6664     | vzaveri@aiiflorida.com     | StandardUser   | Sep@2023! | Sep@2023!       |
 
   @ResetUserPassword
   Scenario Outline: As a SPIN adminuser, I should be able to reset password for users
@@ -128,24 +127,64 @@ Feature: Spin Application User Management Feature
     And Enter <newpassword> and click on change password
     Then Verify password Changed Successfully
 
-     Examples: 
-      | username    | password  	| searchuser 		  | newpassword 	|
-      | gallopadmin | July@2023!  | AG5959	   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | AG0676	   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | JLOWE		   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | MKOZIEL	   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | JFOSTER	   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | PKNOWLES	   		| Sep@2023!     |
-      | gallopadmin | July@2023!  | DBEATTIE	   		| Sep@2023!     |
-      | gallopadmin | July@2023!  | TWilliamsD	   	| Sep@2023!     |
-      | gallopadmin | July@2023!  | LZALANSKY	   		| Sep@2023!     |
-      | gallopadmin | July@2023!  | BSMITS	   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | TWATSON	   		 	| Sep@2023!     |
-      | gallopadmin | July@2023!  | TCRENSHAW	   		| Sep@2023!     |
-      | gallopadmin | July@2023!  | pmadigan	   		| Sep@2023!     |
-      | gallopadmin | July@2023!  | Wdennis	   		 	| Sep@2023!     |
-      	
-
+    Examples: 
+      | username    | password    | searchuser   | newpassword |
+      | gallopadmin | April@2024! | ggahrman     | April@2024! |
+      | gallopadmin | April@2024! | jbarnes      | April@2024! |
+      | gallopadmin | April@2024! | BMCclain     | April@2024! |
+      | gallopadmin | April@2024! | ASakamuri    | April@2024! |
+      | gallopadmin | April@2024! | jburlett     | April@2024! |
+      | gallopadmin | April@2024! | JBrock       | April@2024! |
+      | gallopadmin | April@2024! | jwinslow     | April@2024! |
+      | gallopadmin | April@2024! | djenkins     | April@2024! |
+      | gallopadmin | April@2024! | Krajewski    | April@2024! |
+      | gallopadmin | April@2024! | supadhyaya   | April@2024! |
+      | gallopadmin | April@2024! | ERodriguez1  | April@2024! |
+      | gallopadmin | April@2024! | ssoohoo      | April@2024! |
+      | gallopadmin | April@2024! | rpasala      | April@2024! |
+      | gallopadmin | April@2024! | HafeezShaik  | April@2024! |
+      | gallopadmin | April@2024! | Vzaveri      | April@2024! |
+      | gallopadmin | April@2024! | CTramontano  | April@2024! |
+      | gallopadmin | April@2024! | zgawienczuk  | April@2024! |
+      | gallopadmin | April@2024! | mderebecki   | April@2024! |
+      | gallopadmin | April@2024! | LGuna        | April@2024! |
+      | gallopadmin | April@2024! | mpamu        | April@2024! |
+      | gallopadmin | April@2024! | akura        | April@2024! |
+      | gallopadmin | April@2024! | vappikonda   | April@2024! |
+      | gallopadmin | April@2024! | hchimakurthi | April@2024! |
+      | gallopadmin | April@2024! | smunduri     | April@2024! |
+      | gallopadmin | April@2024! | pvispute     | April@2024! |
+      | gallopadmin | April@2024! | kshaik       | April@2024! |
+      | gallopadmin | April@2024! | AG1730       | April@2024! |
+      | gallopadmin | April@2024! | AG1171       | April@2024! |
+      | gallopadmin | April@2024! | AG1529       | April@2024! |
+      | gallopadmin | April@2024! | AG6718       | April@2024! |
+      | gallopadmin | April@2024! | AG8134       | April@2024! |
+      | gallopadmin | April@2024! | AG8735       | April@2024! |
+      | gallopadmin | April@2024! | AG9077       | April@2024! |
+      | gallopadmin | April@2024! | AG0005       | April@2024! |
+      | gallopadmin | April@2024! | AG5959       | April@2024! |
+      | gallopadmin | April@2024! | AG0676       | April@2024! |
+      | gallopadmin | April@2024! | JLOWE        | April@2024! |
+      | gallopadmin | April@2024! | JFOSTER      | April@2024! |
+      | gallopadmin | April@2024! | DBEATTIE     | April@2024! |
+      | gallopadmin | April@2024! | LZALANSKY    | April@2024! |
+      | gallopadmin | April@2024! | TCRENSHAW    | April@2024! |
+      | gallopadmin | April@2024! | pmadigan     | April@2024! |
+      | gallopadmin | April@2024! | Wdennis      | April@2024! |
+      | gallopadmin | April@2024! | Adjuster1    | April@2024! |
+      | gallopadmin | April@2024! | Adjuster2    | April@2024! |
+      | gallopadmin | April@2024! | Adjuster3    | April@2024! |
+      | gallopadmin | April@2024! | Billing1     | April@2024! |
+      | gallopadmin | April@2024! | BillingMgr   | April@2024! |
+      | gallopadmin | April@2024! | Accounting   | April@2024! |
+      | gallopadmin | April@2024! | Underwriter1 | April@2024! |
+      | gallopadmin | April@2024! | uwmanager1   | April@2024! |
+      | gallopadmin | April@2024! | csruw1       | April@2024! |
+      | gallopadmin | April@2024! | Claimmgr1    | April@2024! |
+      | gallopadmin | April@2024! | AGISA002537  | April@2024! |
+      | gallopadmin | April@2024! | Zglover      | April@2024! |
+      | gallopadmin | April@2024! | Aallen       | April@2024! |
 
   @UpdateUsers
   Scenario Outline: As a SPIN adminuser, I should to update concurrent session and email address of specific user.
@@ -157,17 +196,16 @@ Feature: Spin Application User Management Feature
     And Enter ConcurrentSessions : <ConcurrentSessions>
     And Enter the Email Address : <EmailAddress>
     And Click On Save at UserMaintenance Screen
-    
-    Examples:
-    
-      | username    | password     | SearchExistingUser | EmailAddress         | ConcurrentSessions | 
-      | gallopadmin | Winter2023!  | OB24USER1  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER2 				  | aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER3  			  | aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER4  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER5  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER6  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER7  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER8  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER9  				| aiops@aiiflorida.com |                 10 | 
-      | gallopadmin | Winter2023!  | OB24USER10 				| aiops@aiiflorida.com |                 10 | 
+
+    Examples: 
+      | username    | password    | SearchExistingUser | EmailAddress         | ConcurrentSessions |
+      | gallopadmin | Winter2023! | OB24USER1          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER2          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER3          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER4          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER5          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER6          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER7          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER8          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER9          | aiops@aiiflorida.com |                 10 |
+      | gallopadmin | Winter2023! | OB24USER10         | aiops@aiiflorida.com |                 10 |

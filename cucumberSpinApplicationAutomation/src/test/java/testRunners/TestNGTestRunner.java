@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions (
 		features = "src\\test\\java\\features",
 		glue = "spinstepdefinitions", 
-		tags= "@AdjusterLicenseScript", 
+		tags= "@ResetUserPassword", 
 		
 //		dryRun = true, // step definition implementation check
 		monochrome = true, // test results in console formatted

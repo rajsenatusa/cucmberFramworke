@@ -11,7 +11,6 @@ public class ObjectManager {
 	public  UserMaintenancePage UserMaintenancePage;
 	public  ClaimMaintenancePage ClaimMaintenancePage;
 	public  DataBasePage DataBasePage;
-	public  ProviderLookupPage ProviderLookupPage;
 	public  WebDriver driver;
 	
 	public ObjectManager (WebDriver driver) {
@@ -54,10 +53,6 @@ public class ObjectManager {
 		return DataBasePage;
 	}
 	
-	public ProviderLookupPage getProviderLookupPage() {		
-		ProviderLookupPage = new ProviderLookupPage(driver);
-		return ProviderLookupPage;
-	}
 }
 
 

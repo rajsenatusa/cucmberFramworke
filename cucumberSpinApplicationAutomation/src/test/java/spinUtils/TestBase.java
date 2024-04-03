@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -22,7 +24,7 @@ public class TestBase {
 				Properties prop = new Properties ();
 				prop.load(filename);
 				
-				String appUrL = prop.getProperty("model");
+				String appUrL = prop.getProperty("model2");
 				String browser_properties = prop.getProperty("browser");
 				String browser_mvn = System.getProperty("browser");
 				String browser = browser_mvn!=null ? browser_mvn:browser_properties;
@@ -30,8 +32,15 @@ public class TestBase {
 					if (driver == null) 
 					{
 						if (browser.equalsIgnoreCase("chrome")) 
+							
 						{
-							driver = WebDriverManager.chromedriver().create();
+							ChromeOptions option = new ChromeOptions();
+							option.addArguments("--remote-allow-origins=*");
+							WebDriverManager.chromedriver().clearDriverCache().setup();
+//							WebDriverManager.chromedriver().clearResolutionCache().setup();
+//							WebDriverManager.chromedriver().setup();
+							driver = new ChromeDriver(option);
+//							driver = WebDriverManager.chromedriver().create();
 							driver.get(appUrL);
 							driver.manage().window().maximize();
 						}
