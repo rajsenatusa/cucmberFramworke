@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions (
 		features = "src\\test\\java\\features",
 		glue = "spinstepdefinitions", 
-		tags= "@ResetUserPassword", 
+		tags= "@CopyUsersMirrorAccess", 
 		
 //		dryRun = true, // step definition implementation check
 		monochrome = true, // test results in console formatted

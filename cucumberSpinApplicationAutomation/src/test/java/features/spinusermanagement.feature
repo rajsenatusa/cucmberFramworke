@@ -101,20 +101,9 @@ Feature: Spin Application User Management Feature
     Then Verify User Successfully Created
 
     Examples: 
-      | username    | password  | SearchExistingUser | UserCode     | FirstName    | LastName    | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress               | PasswordPolicy | Password  | ConfirmPassword |
-      | gallopadmin | AiiG@2070 | DBEATTIE           | Adjuster1    | Adjuster1    | Adjuster1   | Business           | (813) 512-6664     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | JFOSTER            | Adjuster2    | Adjuster2    | Adjuster2   | Business           | (737) 443-0821     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | LZALANSKY          | Adjuster3    | Adjuster3    | Adjuster3   | Business           | (813) 880-7059     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | BSMITS             | Billing1     | Billing1     | Billing1    | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | TWATSON            | BillingMgr   | BillingMgr   | BillingMgr  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | TCRENSHAW          | Accounting   | Accounting   | Accounting  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | JLowe              | Underwriter1 | Underwriter1 | Accounting  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | MKOZIEL            | uwmanager1   | uwmanager1   | uwmanager1  | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | JFOSTER            | csruw1       | csruw1       | csruw1      | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | Wdennis            | Claimmgr1    | Claimmgr1    | Claimmgr1   | Business           | (970) 219-9815     | model@aiiflorida.com       | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | srajendran         | rpasala      | rpasala      | rpasala     | Business           | (813) 512-6664     | rpasala@aiiflorida.com     | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | srajendran         | HafeezShaik  | HafeezShaik  | HafeezShaik | Business           | (813) 512-6664     | HafeezShaik@aiiflorida.com | StandardUser   | Sep@2023! | Sep@2023!       |
-      | gallopadmin | AiiG@2070 | srajendran         | Vzaveri      | Vzaveri      | Vzaveri     | Business           | (813) 512-6664     | vzaveri@aiiflorida.com     | StandardUser   | Sep@2023! | Sep@2023!       |
+      | username    | password    | SearchExistingUser | UserCode     | FirstName | LastName    | TypeOfPrimaryPhone | PrimaryPhoneNumber | EmailAddress                | PasswordPolicy | Password    | ConfirmPassword |
+      | gallopadmin | April@2024! | srajendran         | ssigilipelli | Srujana   | Sigilipelli | Business           | (813) 880-7065     | ssigilipelli@aiiflorida.com | StandardUser   | April@2024! | April@2024!     |
+      | gallopadmin | April@2024! | srajendran         | kbalu        | Kiruthika | Balu        | Business           | (813) 915-5865     | kbalu@aiiflorida.com        | StandardUser   | April@2024! | April@2024!     |
 
   @ResetUserPassword
   Scenario Outline: As a SPIN adminuser, I should be able to reset password for users
